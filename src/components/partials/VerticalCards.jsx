@@ -9,7 +9,7 @@ const VerticalCards = ({ data, title }) => {
         <Link
         to={`/${d.media_type || title}/details/${d.id}`}
           key={i}
-          className="w-[15%] relative h-50 shadow-2xl bg-[#1F1E24] mb-5 mr-5 overflow-hidden rounded-md"
+          className="w-[15%] relative h-50 shadow-2xl bg-[#1F1E24] mb-5 mr-5 overflow-hidden rounded-md z-0"
         >
           <img
             className="rounded-md w-full h-30 hover:scale-105 object-cover"

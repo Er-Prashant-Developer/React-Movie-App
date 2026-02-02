@@ -23,14 +23,14 @@ function Topnav() {
   }, [query]);
 
   return (
-    <div className="w-[80%] mx-auto h-[10vh] flex  justify-start items-center relative">
+    <div className="w-[80%] z-50 mx-auto h-[10vh] flex  justify-start items-center relative">
       <i className="text-3xl text-zinc-400 ri-search-2-line"></i>
       <input
         onChange={(e) => {
           setQuery(e.target.value);
         }}
         value={query}
-        className="p-5 text-xl border-none outline-none w-[50%] mx-5 bg-transparent text-zinc-200"
+        className="p-5 text-xl border-none outline-none w-[50%] z-50 mx-5 bg-transparent text-zinc-200"
         type="text"
         placeholder="search anything"
       />
@@ -44,12 +44,12 @@ function Topnav() {
       )}
 
       {query && (
-        <div className="absolute max-h-[50vh] w-[50%] bg-zinc-200 top-[90%] ml-17 overflow-auto rounded-md">
+        <div className="absolute z-50 max-h-[50vh] w-[50%] bg-zinc-200 top-[90%] ml-17 overflow-auto rounded-md">
           {searches.map((e, i) => (
             <Link
               to={`/${e.media_type}/details/${e.id}`}
               key={i}
-              className="inline-block hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 border-b-2 border-zinc-100 p-10 w-[100%] border-2 flex justify-start items-center"
+              className="inline-block hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 border-b-2 border-zinc-100 p-10 w-[100%] border-2 flex justify-start items-center "
             >
               <div className="flex items-center">
                 <img
